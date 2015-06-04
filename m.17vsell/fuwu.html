@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>微商服务</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/idangerous.swiper.css" rel="stylesheet">
+    <link href="css/cellphone.css" rel="stylesheet">
+</head>
+<body>
+<nav>
+    <a href="index.html" class="active"><i class="fa fa-home"></i>首页</a>
+    <a href="peixun.html"><i class="fa fa-headphones"></i>微商培训</a>
+    <a href="zizhi.html"><i class="fa fa-star-half-o"></i>关于我们</a>
+</nav>
+<div class="service">
+    <div class="box1">
+        <p class="p1">属于你自己私人的微商网站<span>不可思议的简单，快速创建微店站，全方位SHOW</span></p>
+        <ul>
+            <li><img src="images/item/step1.png">
+
+                <p>添加一起微商</p></li>
+            <li><img src="images/item/step2.png">
+
+                <p>填写微店信息</p></li>
+            <li><img src="images/item/step3.png">
+
+                <p>发布完成</p></li>
+        </ul>
+    </div>
+    <div class="box2">
+        <ul>
+            <li>
+                <div>
+                    <img src="images/item/wsfw-it1.png">
+
+                    <p class="p1">个人微店</p>
+
+                    <p class="p2">快速开店<br>妈妈再也不用担心我了</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="images/item/wsfw-it2.png">
+
+                    <p class="p1">服务商平台</p>
+
+                    <p class="p2">找服务商<br>帮您搭建\经营微商城</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="images/item/wsfw-it3.png">
+
+                    <p class="p1">完美对接微信</p>
+
+                    <p class="p2">只要您有微信号<br>就可创建自己的微店</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="images/item/wsfw-it4.png">
+
+                    <p class="p1">微订单</p>
+
+                    <p class="p2">通过微信就能<br>快速下订单</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="swiper-container box-3">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/temp/anli1.jpg"></div>
+            <div class="swiper-slide"><img src="images/temp/anli2.jpg"></div>
+            <div class="swiper-slide"><img src="images/temp/anli3.jpg"></div>
+            <div class="swiper-slide"><img src="images/temp/anli4.jpg"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</div>
+<div class="aboutus">
+    <p class="p1">湖南由创信息技术有限公司</p>
+    <p class="p2">地址:长沙高新开发区麓龙路199号麓谷商务EF栋301房</p>
+    <p class="p1">联系我们（9:00-22:00）</p>
+    <p><a href="tel:4006227186">400 622 7186 (个人业务)</a>&nbsp;&nbsp;<a href="tel:4006226586">400 622 6586 (企业业务)</a></p>
+    <p>湘ICP备12006277号-42</p>
+</div>
+<script src="js/idangerous.swiper-2.0.min.js"></script>
+<script>
+    var tabsSwiper = new Swiper('.swiper-container', {
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        speed: 500,
+        autoplay: 3500,
+        onSlideChangeStart: function () {
+            $(".tabs .active").removeClass('active')
+            $(".tabs a").eq(tabsSwiper.activeIndex).addClass('active')
+        }
+    })
+</script>
+</body>
+</html>

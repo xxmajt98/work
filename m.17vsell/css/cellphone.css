@@ -1,0 +1,347 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header,  menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 45px;
+    background: #e5e5e5;
+    font-size: 14px;
+    font-family: \5FAE\8F6F\96C5\9ED1, Microsoft YaHei, Arial, Helvetica, sans-serif;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    color: #666;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+    background: none;
+}
+img{
+    display: block;
+}
+/*导航
+*******************************/
+nav{
+    position: fixed;
+    top: 0;
+    z-index: 999999;
+    width: 100%;
+    background: #20282a;
+    border-bottom: solid 1px #000;
+}
+nav>a{
+    display: block;
+    padding-top: 5px;
+    line-height: 40px;
+    width:27%;
+    text-align: center;
+    color: #fff;
+    background: #20282a;
+    font-size: 14px;
+    float: left;
+    white-space: nowrap;
+}
+nav a.home{width:40px;}
+nav>.active{
+    background: #2c373a;
+}
+nav>a>.fa{
+    padding-right: 3px;
+    position: relative;
+    top: 2px;
+    font-size: 20px;
+}
+/*首页
+*******************************/
+.banner{
+    width: 100%;
+    overflow: hidden;
+    border-bottom: solid 1px #ddd;
+    margin-bottom: 15px;
+}
+.banner img{
+    width: 100%;
+}
+.main{
+    background: #34b969;
+    padding: 0 10px 10px 10px;
+    overflow: hidden;
+}
+.main li{
+    margin-top: 20px;
+}
+.main li img{
+    margin: auto;
+}
+@media (max-width: 360px) {
+    .main li img{
+        width: 100%;
+    }
+}
+@media (min-width: 1000px) {
+    .main{
+        padding: 50px 0;
+    }
+    .main li{
+        float: left;
+        width: 33.33333%;
+    }
+}
+.text-box{
+    padding: 15px;
+    background: #fff;
+    overflow: hidden;
+}
+.text-box h6{
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+}
+.text-box p{
+    font-size: 14px;
+    color: #666;
+    line-height: 22px;
+    text-indent: 2em;
+}
+.aboutus{
+    padding: 15px 0;
+    line-height: 18px;
+    background: #34b969;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+}
+.aboutus a{
+    color: #fff;
+}
+.aboutus .p1{
+    font-size: 14px;
+    font-weight: bold;
+}
+.aboutus .p2{
+    margin-bottom: 10px;
+    padding-bottom: 7px;
+    border-bottom: dotted 1px #fff;
+}
+/*易微卖介绍
+*******************************/
+.header{
+    padding: 5px 0;
+    height: 50px;
+    border-bottom: solid 1px #ddd;
+    background: #fff;
+}
+.header img{
+    display: block;
+    margin: auto;
+}
+.tabs{
+    height: 40px;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+}
+.tabs a{
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    float: left;
+}
+.tabs .active{
+    background: #34b969;
+    color: #fff;
+}
+.intro-box{
+    padding: 10px;
+    border: solid 1px #ddd;
+    background: #fff;
+    overflow: hidden;
+}
+.intro-box  li{
+    width: 100%;
+    float: left;
+    border-top: dotted 1px #ccc;
+}
+.intro-box  li img{
+    margin: 10px 10px 10px 0;
+    display: block;
+    float: left;
+}
+.intro-box  li:first-child{
+    border: none !important;
+}
+.intro-box  li:first-child p{
+    width: 100%;
+    height: 50px;
+    line-height: 40px;
+    font-size: 16px !important;
+    text-align: center;
+}
+.intro-box  li:first-child p span{
+    padding: 0 5px;
+    font-size: 22px !important;
+    color: #34b969;
+}
+.intro-box  li  p{
+    margin-top: 15px;
+    color: #34b969;
+    font-size: 16px;
+    line-height: 20px;
+}
+.intro-box  li  p:last-child{
+    margin-top: 2px;
+    color: #999;
+    font-size: 12px;
+}
+.download-box{
+    padding: 10px;
+    position: relative;
+    margin-top: 15px;
+    background: url("../images/item/softdownbg.png") center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.download-box p:first-child{
+    text-align: center;
+    font-size: 16px;
+    line-height: 50px;
+    color: #fff;
+}
+.download-box p:first-child span{
+    padding: 0 5px;
+    font-size: 22px;
+    color: #fff100;
+}
+.download-box img{
+    display: block;
+    margin: auto;
+}
+.download-box img:nth-child(3){
+    margin: 10px auto;
+    width: 150px;
+}
+.download-box a {
+    margin: auto;
+    display: block;
+    width: 219px;
+    height: 63px;
+    background: url(../images/item/soft_down_btn.png);
+}
+.intro-img{
+    position: relative;
+    margin: 15px 0;
+    padding: 15px 0;
+    width: 100%;
+    border-top: solid 1px #ddd;
+    border-bottom: solid 1px #ddd;
+    background: #fff;
+    overflow: hidden;
+}
+.intro-img .txt-box{
+    position: relative;
+    margin: auto;
+    width: 320px;
+    height: 283px;
+}
+.intro-img img{
+    display: block;
+    width: 320px;
+    margin: auto;
+}
+.intro-img p{
+    position: absolute;
+    font-size: 12px;
+    color: #999;
+}
+.intro-img p:nth-child(2){ top:25px;  width: 100%;  text-align: center;  }
+.intro-img p:nth-child(3){ top: 60px; left: 33px;}
+.intro-img p:nth-child(4){ top: 80px; left:-18px; text-align: right;}
+.intro-img p:nth-child(5){ top: 120px; left:85px; text-align: right;}
+.intro-img p:nth-child(6){ top: 180px; left:135px; text-align: center;}
+.intro-img p:nth-child(7){ top: 185px; left:218px; }
+.intro-img p:nth-child(8){ top: 140px; left:268px;width: 80px; }
+
+/*微商服务
+*******************************/
+.service .box1{
+    padding: 15px;
+    background: #fff;
+    overflow: hidden;
+    border-bottom: solid 1px #ddd;
+}
+.service .box1 .p1{
+    padding-top: 5px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 24px;
+}
+.service .box1 .p1 span{
+    padding-top: 5px;
+    display: block;
+    font-size: 14px;
+}
+.service .box1 ul{
+    padding: 15px 0;
+}
+.service .box1 ul li{
+    width: 33.3333333%;
+    float: left;
+}
+.service .box1 ul li img{
+    margin: auto;
+    width: 60px;
+}
+.service .box1 ul li p{
+    padding-top: 7px;
+    text-align: center;
+    font-size: 14px;
+}
+.service .box2{
+    margin: 15px 0;
+    border-bottom: solid 1px #ddd;
+    background: #fff;
+    overflow: hidden;
+}
+.service .box2 ul li{
+    width: 50%;
+    float: left;
+}
+.service .box2 ul li>div{
+    padding: 15px 0;
+    border-top:solid 1px #e5e5e5;
+    border-right: solid 1px #e5e5e5;
+}
+.service .box2 ul li img{
+    margin: auto;
+    width: 60px;
+}
+.service .box2 ul li .p1{
+    padding: 5px 0;
+    text-align: center;
+    font-size: 14px;
+}
+.service .box2 ul li .p2{
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    color: #999;
+}
+.service .box-3{
+    padding: 15px 0;
+    height: 323px;
+    background: #fff;
+    border-bottom: solid 1px #ddd;
+    border-top: solid 1px #ddd;
+    overflow: hidden;
+}
+.service .box-3 .swiper-slide img{
+    margin: auto;
+}

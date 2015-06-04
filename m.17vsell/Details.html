@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title id="DetailsTitle">吴剑蓉 导师课程试听</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/PageList.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/cellphone.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="home active"><i class="fa fa-home"></i></a>
+        <a href="List.html" class="active"><i class="fa fa-headphones"></i>微商培训</a>
+        <a href="live.html"><i class="fa fa-headphones"></i>今日直播</a>
+        <a href="space.html"><i class="fa fa-headphones"></i>导师空间</a>
+    </nav>
+    <div class="homebackarea">
+        <a href="TeacherZone.html?tId=527" id="goback"><i class="icon_back"></i>导师空间</a>
+        <a href="List.html" id="gohome"><i class="icon_home"></i>主页</a>
+    </div>
+    <div class="teacher-box">
+        <div class="head-pic">
+            <a id="imgHead" href="TeacherZone.html?tId=527">
+                <img src="http://picture.ewemai.com/gl/image/20150519/20150519220540_3245.jpg" id="tImage"></a>
+        </div>
+        <div class="tc-name" id="tName"><span>吴剑蓉</span></div>
+        <div class="tc-intro" id="tInfo">安利高级经销商， 广州盈康健康生活馆（珠江新城金穗路）董事长， 广州医科大学医学学士， IARI注册高级营养师，从事健康产业18年、负责相应产品渠道招商、经销商培训、消费者教育讲座，广州高端会所私人营养顾问，悦生活-微社交系列平台联合发起人。</div>
+        <div class="details-box" id="tTitle">【悦生活·创业微社交】《提升团队耐挫抗压性》</div>
+        <div id="RecPassWord" class="stpass" style="margin: 0 10px; border-radius: 5px; border: 1px solid #ccc; overflow: hidden; display: none">
+            <input id="txtRecPw" type="password" placeholder="请输入您的视听密码" style="width: 100%; border: 0; height: 35px; line-height: normal; text-indent: 5px;">
+        </div>
+        <div class="listennow">
+            <a id="aListNow" href="javascript:ListenIn()" class="listennow" style="">立即试听</a>
+            <img src="images/icon/17code4.png">
+            <div id="divKW" style="text-align: center; height: 100px; display: none; padding-top: 30px">
+                <!--请在公众号中回复以下文字-->
+                <div id="divKeyWord" style="padding: 10px 0 10px 0"></div>
+                <!--<span style=" font-size:12px">[长按红色字体复制]</span>-->
+
+            </div>
+        </div>
+        <div class="comment ">
+            <ul class="tj">
+                <li>收听数：<span id="tSee">3055</span></li>
+                <li>评分：<span id="tScore">7.23</span></li>
+            </ul>
+            <ul class="comment-box" id="divEvaluation"><li><div class="name"><div class="namebox">2015/5/25 21:50:17<p></p><p>10.0分</p></div></div><div class="text">不错</div></li></ul>
+            <div id="pagelist"></div>
+            <div class="comment-box-1" id="divPl" style="display: none">
+                <div class="slider">
+                    <ul>
+                        <li class="active"></li>
+                        <li class="active"></li>
+                        <li class="active"></li>
+                        <li class="active"></li>
+                        <li class="active"></li>
+                        <li class="active"></li>
+                        <li class="active"></li>
+                        <li class="active"></li>
+                        <li class="active"></li>
+                        <li class="active"></li>
+                    </ul>
+                    <input id="txtSroce" type="text" value="" readonly="readonly">
+                </div>
+                <textarea placeholder="说点什么吧..." id="txtContext"></textarea>
+                <input type="submit" value="提交" onclick="SubmitEvaluation()">
+            </div>
+            <div class="listennow" id="divForumMore" style="display: none"><a href="List.html" class="listennow">更多精彩课程</a></div>
+        </div>
+    </div>
+    <div class="popup-1" style="display: none;">
+    </div>
+    <div class="ewm-content">
+        <img src="images/temp/17code.png">
+        <p>长按二维码图片关注我们，获得完整的听课体验并享受更多服务支持</p>
+        <div class="close">+</div>
+    </div>
+    <div class="popup-2" style="display: none">
+        <img src="images/icon/popup-2.png">
+    </div>
+    <div class="aboutus">
+        <p class="p1">湖南由创信息技术有限公司</p>
+        <p class="p2">地址:长沙高新开发区麓龙路199号麓谷商务EF栋301房</p>
+        <p class="p1"><a href="About.html">关于我们</a>&nbsp;&nbsp;联系我们（9:00-22:00）</p>
+        <p><a href="tel:4006227186">400 622 7186 (个人业务)</a>&nbsp;&nbsp;<a href="tel:4006226586">400 622 6586 (企业业务)</a></p>
+        <p>湘ICP备12006277号-42</p>
+    </div>
+    <script>
+        $(function () {
+            //五星评分
+            var starNum = 10;
+            if (starNum < 10) {
+                $(".slider ul li").eq(starNum).prevAll().addClass("active");
+            } else {
+                $(".slider ul li").addClass("active");
+            };
+            $(".slider input[type=text]").val(starNum + "分");
+            $(".slider ul li").click(function () {
+                var index = $(this).index();
+                $(this).addClass("active");
+                $(this).prevAll().addClass("active");
+                $(this).nextAll().removeClass("active");
+                $(".slider input[type=text]").val(index + 1 + "分");
+            });
+            $(".close").click(function () {
+                $(".popup-1,.ewm-content").fadeOut();
+                $("html,body").css({
+                    overflow: "auto"
+                })
+
+            });
+            $(".popup-2 img").click(function () {
+                $(".popup-2").fadeOut();
+            });
+        })
+
+    </script>
+    <script type="text/javascript" src="js/Details.js"></script>
+
+
+
+<span style="opacity: 0.3; -webkit-transition: 0.2s; transition: 0.2s; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAUBAMAAAByuXB5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAbUExURf///6qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpshoL4AAAAIdFJOUwARM2aImczuGAB4owAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAEZJREFUGNNj6IABBgQLB2BME4CyxDoSIQymio52BTBLHaixCMRgrgCy2g2ALAuwac0MDCxQgx0YIqCsVhTbOIBUA9gUslkA7dcxR/3Xli8AAAAASUVORK5CYII=); background-attachment: scroll; background-color: rgba(0, 0, 0, 0.701961); border-top-left-radius: 5px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 5px; cursor: pointer; position: fixed; bottom: 18%; width: 60px; height: 60px; right: -40px; z-index: 9999; background-position: 50% 50%; background-repeat: no-repeat no-repeat;"></span><span style="opacity: 0.3; -webkit-transition: 0.2s; transition: 0.2s; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAUBAMAAAByuXB5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAbUExURf///6qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpshoL4AAAAIdFJOUwARM2aImczuGAB4owAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAE1JREFUGNNjYGDg6OjoaGAAAfJZHTDAEAFltDKwQFkODAwWYEYzUCFzBZDRbgDSqw5kFYFNYaroaFcAsxjEOhIhDAbGNAEGHABhG5wFAH6qMUfw6SaOAAAAAElFTkSuQmCC); background-attachment: scroll; background-color: rgba(0, 0, 0, 0.701961); border-top-left-radius: 5px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 5px; cursor: pointer; position: fixed; top: 85%; width: 60px; height: 60px; right: -40px; z-index: 9999; background-position: 50% 50%; background-repeat: no-repeat no-repeat;"></span></body></html>
